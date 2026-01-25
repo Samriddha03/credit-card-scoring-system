@@ -1,12 +1,12 @@
-## Credit Card Scoring System API (ML + FastAPI)
+# Credit Card Scoring System API (ML + FastAPI)
 
-# Project Overview
+##  Project Overview
 
 The Credit Card Scoring System API predicts credit risk scores for customers using pre-trained machine learning models.
 
-## This system integrates:
+# This system integrates:
 
-# Machine Learning Models: 
+## Machine Learning Models: 
 
 - credit_risk_model.pkl
 - german_credit_model.pkl
@@ -15,16 +15,16 @@ The Credit Card Scoring System API predicts credit risk scores for customers usi
 
 * Deployment Ready: Compatible with Docker, Railway, Render, Heroku, or Koyeb
 
-# Users can send customer data through API requests and receive real-time credit risk predictions.
+## Users can send customer data through API requests and receive real-time credit risk predictions.
 
-## System Architecture:
+# System Architecture:
 Frontend / Client (optional)
         ↓
    FastAPI Backend
         ↓
  Machine Learning Models (.pkl)
 
- # Project Structure
+## Project Structure
 credit-card-scoring-system/
 ├── api/
 │   ├── model/
@@ -40,7 +40,7 @@ credit-card-scoring-system/
 ├── .gitignore                   # Git ignore file
 └── README.md                    # 
 
-# Project documentation
+## Project documentation
 
 Dataset & Model Training
 
@@ -56,7 +56,7 @@ Available Endpoints
 * POST /predict – Predict credit risk score for a customer
 * GET /health – Check server health
 
-# Example Request
+## Example Request
 ```
 {
   "Age": 35,
@@ -70,7 +70,7 @@ Available Endpoints
 }
 ```
 
-# Example Response
+## Example Response
 ```
 {
   "risk_prediction": 1,
@@ -90,13 +90,13 @@ Swagger docs: http://127.0.0.1:8000/docs
 ReDoc docs: http://127.0.0.1:8000/redoc
 
 Deployment Docker Deployment
-# Build Docker image
+## Build Docker image
 docker build -t credit-card-api .
 
-# Run Docker container
+##  Run Docker container
 docker run -p 8000:8000 credit-card-api
 
-# Supported Platforms
+## Supported Platforms
 
 * Railway
 * Render

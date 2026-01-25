@@ -1,26 +1,30 @@
-Credit Card Scoring System API (ML + FastAPI)
-Project Overview
+## Credit Card Scoring System API (ML + FastAPI)
+
+# Project Overview
 
 The Credit Card Scoring System API predicts credit risk scores for customers using pre-trained machine learning models.
 
-This system integrates:
+## This system integrates:
 
-Machine Learning Models: credit_risk_model.pkl, german_credit_model.pkl
+# Machine Learning Models: 
 
-FastAPI Backend: Exposes REST API endpoints for predictions
+- credit_risk_model.pkl
+- german_credit_model.pkl
 
-Deployment Ready: Compatible with Docker, Railway, Render, Heroku, or Koyeb
+* FastAPI Backend: Exposes REST API endpoints for predictions
 
-Users can send customer data through API requests and receive real-time credit risk predictions.
+* Deployment Ready: Compatible with Docker, Railway, Render, Heroku, or Koyeb
 
-System Architecture
+# Users can send customer data through API requests and receive real-time credit risk predictions.
+
+## System Architecture:
 Frontend / Client (optional)
         ↓
    FastAPI Backend
         ↓
  Machine Learning Models (.pkl)
 
- Project Structure
+ # Project Structure
 credit-card-scoring-system/
 ├── api/
 │   ├── model/
@@ -34,28 +38,26 @@ credit-card-scoring-system/
 ├── data/                        # Dataset (if any)
 ├── notebooks/                   # Jupyter notebooks for model training / exploration
 ├── .gitignore                   # Git ignore file
-└── README.md                    # Project documentation
+└── README.md                    # 
+
+# Project documentation
 
 Dataset & Model Training
 
-Pre-trained models are included in api/model/
-
-Models are trained on standard credit risk datasets
-
-Predictions are based on customer financial features
-
-Sample prediction results are stored in predictions_results.csv
+- Pre-trained models are included in api/model/
+- Models are trained on standard credit risk datasets
+- Predictions are based on customer financial features
+- Sample prediction results are stored in predictions_results.csv
 
 ⚠️ This implementation is for learning, demonstration, and portfolio purposes.
 
-Backend API (FastAPI)
+* Backend API (FastAPI)
 Available Endpoints
+* POST /predict – Predict credit risk score for a customer
+* GET /health – Check server health
 
-POST /predict – Predict credit risk score for a customer
-
-GET /health – Check server health
-
-Example Request
+# Example Request
+```
 {
   "Age": 35,
   "Credit_amount": 12000,
@@ -66,15 +68,18 @@ Example Request
   "Checking_account": "little",
   "Purpose": "education"
 }
+```
 
-Example Response
+# Example Response
+```
 {
   "risk_prediction": 1,
   "risk_probability": 0.605,
   "risk_label": "Bad"
 }
+```
 
-Running the Project Locally
+## Running the Project Locally
 
 1️⃣ Start the Backend Server
 uvicorn api.credit_risk_api:app --reload
@@ -84,52 +89,41 @@ Swagger docs: http://127.0.0.1:8000/docs
 
 ReDoc docs: http://127.0.0.1:8000/redoc
 
-Deployment
-Docker Deployment
+Deployment Docker Deployment
 # Build Docker image
 docker build -t credit-card-api .
 
 # Run Docker container
 docker run -p 8000:8000 credit-card-api
 
-Supported Platforms
+# Supported Platforms
 
-Railway
+* Railway
+* Render
+* Heroku
+* Koyeb
 
-Render
+## The project is Docker-ready, making deployment simple and consistent.
 
-Heroku
+# Technologies Used
 
-Koyeb
+1. Python
+2. FastAPI
+3. Scikit-learn
+4. Docker
+5. Git & GitHub
 
-⚡ The project is Docker-ready, making deployment simple and consistent.
+# Deployment Platforms: 
+Railway, Render, Heroku, Koyeb
 
-Technologies Used
+# Project Highlights
 
-Python
-
-FastAPI
-
-Scikit-learn
-
-Docker
-
-Git & GitHub
-
-Deployment Platforms: Railway, Render, Heroku, Koyeb
-
-Project Highlights
-
-REST API for credit risk prediction
-
+-REST API for credit risk prediction
 Pre-trained ML models for instant predictions
-
-Fully Dockerized and deployment-ready
-
-Clean and professional API design
-
+- Fully Dockerized and deployment-ready
+- Clean and professional API design
 Portfolio-ready, suitable for interviews
-Disclaimer
 
+# Disclaimer
 This project is created for educational and demonstration purposes only.
 It should not be used in real-world financial systems without proper validation, security, and testing.

@@ -1,25 +1,75 @@
-# Credit Card Scoring System
+# Credit Card Scoring System API
 
-## Project Overview
-The **Credit Card Scoring System** is a machine learning application that predicts the credit risk of clients applying for a credit card. It helps financial institutions assess whether a client is likely to default based on personal and financial information.
-
-The project features a **FastAPI backend**, which serves the ML model for real-time predictions. It is lightweight, production-ready, and can be deployed on **Railway** or other cloud platforms.
+This project provides a **Credit Card Scoring System API** using **FastAPI**. The API allows you to predict credit risk scores using pre-trained machine learning models.
 
 ---
 
-## Key Features
-- Predicts credit risk as **Good** or **Bad**.
-- Provides **probability scores** for each prediction.
-- Exposes a **REST API** for integration with other applications.
-- Supports **JSON-based requests** for real-time predictions.
-- Supports storing results in CSV for batch processing or auditing.
-- Ready for **cloud deployment** (Railway).
+## Features
+
+- Predict credit risk for individual customers.
+- Supports multiple models (`credit_risk_model.pkl` and `german_credit_model.pkl`).
+- FastAPI-based REST API with Swagger documentation.
+- Ready for deployment using **Docker**, **Railway**, or similar platforms.
+
+---
+
+## Project Structure
+
+api/
+├─ model/
+│ ├─ credit_risk_model.pkl
+│ ├─ german_credit_model.pkl
+│ └─ predictions_results.csv
+├─ credit_risk_api.py
+├─ requirements.txt
+├─ Dockerfile
+└─ runtime.txt
+data/
+notebooks/
+.gitignore
+README.md
 
 ---
 
 ## Installation
 
-1. **Clone the repository**
+Clone the repository:
+
 ```bash
-git clone https://github.com/Samriddha03/credit-card-scoring-system/Samriddha03/credit-card-scoring-system.git
-cd credit-card-scoring-system/api
+git clone https://github.com/Samriddha03/credit-card-scoring-system.git
+cd credit-card-scoring-system
+
+Install dependencies:
+
+pip install -r api/requirements.txt
+
+Running the API Locally
+uvicorn api.credit_risk_api:app --reload
+
+
+API will run at: http://127.0.0.1:8000
+
+Swagger documentation: http://127.0.0.1:8000/docs
+
+ReDoc documentation: http://127.0.0.1:8000/redoc
+
+Deployment
+
+The project is ready for deployment on platforms like:
+
+Railway
+
+Render
+
+Heroku
+
+Koyeb
+
+Example Docker deployment:
+
+docker build -t credit-card-api .
+docker run -p 8000:8000 credit-card-api
+
+Usage
+
+Once deployed, open the Swagger UI /docs to test your API endpoints. You can send requests and see predicted credit risk scores directly from the live API.

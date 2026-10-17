@@ -47,9 +47,9 @@ source venv/bin/activate
 3. Install Dependencies
 pip install -r requirements.txt
 ---
-```
-##🚀 Running the Application Locally 
 
+##🚀 Running the Application Locally 
+```
 To run the system locally, you will need to open two separate terminal windows (both with your virtual environment activated):
 Step A: Start the FastAPI Backend: uvicorn api.credit_risk_api:app --reload
 

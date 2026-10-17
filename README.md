@@ -35,10 +35,11 @@ credit-card-scoring-system/
 
 1. Clone the Repository 
 [https://github.com/Samriddha03/credit-card-scoring-system.git](https://github.com/Samriddha03/credit-card-scoring-system.git)
+
 cd credit-card-scoring-system
 
 2. Set Up a Virtual Environment
-Bashpython -m venv venv
+python -m venv venv
 # On Windows:
 .\venv\Scripts\Activate
 # On macOS/Linux:
@@ -52,7 +53,9 @@ pip install -r requirements.txt
 
 To run the system locally, you will need to open two separate terminal windows (both with your virtual environment activated):
 
-Step A: Start the FastAPI Backend: uvicorn api.credit_risk_api:app --reload
+Step A: Start the FastAPI Backend: 
+
+uvicorn api.credit_risk_api:app --reload
 
 API Root / Health Check: http://127.0.0.1:8000Interactive 
 

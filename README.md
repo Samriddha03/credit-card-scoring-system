@@ -111,4 +111,11 @@ Example Response:JSON{
 }
 ---
 ```
+---
+
+## 🌐 Live Demo & Deployment Status
+
+* **Current Status:** Running locally via `localhost:8501`.
+* **Cloud Deployment:** Public cloud hosting (e.g., Streamlit Community Cloud / Render) is currently in progress and will be linked here soon once live! In the meantime, you can easily spin up the app locally using the [Local Installation & Running Guide](#️-local-installation--running-guide) above.
+
 💻 Technologies UsedPython – Core programming languageFastAPI – Backend API frameworkStreamlit – Frontend user interface frameworkScikit-learn – Machine learning model training and inferenceGit & GitHub – Version control and repository management

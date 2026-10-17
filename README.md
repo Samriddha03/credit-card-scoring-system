@@ -69,7 +69,7 @@ Streamlit UI Link: http://localhost:8501🔌
 ```
 1. Health CheckGET / or /healthResponse: Confirms the backend server status.
 2. Risk PredictionPOST /predictExample Request Payload (UCI Credit Card Schema):   
-
+```
 JSON{
   "LIMIT_BAL": 20000,
   "SEX": 2,

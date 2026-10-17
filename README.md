@@ -48,7 +48,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 ---
 
-##🚀 Running the Application Locally 
+# 🚀 Running the Application Locally 
 
 To run the system locally, you will need to open two separate terminal windows (both with your virtual environment activated):
 
@@ -70,6 +70,7 @@ Streamlit UI Link: http://localhost:8501🔌
 ```
 1. Health CheckGET / or /healthResponse: Confirms the backend server status.
 2. Risk PredictionPOST /predictExample Request Payload (UCI Credit Card Schema):   
+```
 ```
 JSON{
   "LIMIT_BAL": 20000,

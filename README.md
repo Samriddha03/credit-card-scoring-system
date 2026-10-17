@@ -29,10 +29,11 @@ credit-card-scoring-system/
 ├── requirements.txt             # Project Python dependencies
 ├── .gitignore                   # Git ignore configuration
 └── README.md                    # Project documentation
-
-## ⚙️ Local Installation & Running Guide
+---
 ```
-1. Clone the RepositoryBashgit clone 
+## ⚙️ Local Installation & Running Guide
+
+1. Clone the Repository 
 [https://github.com/Samriddha03/credit-card-scoring-system.git](https://github.com/Samriddha03/credit-card-scoring-system.git)
 cd credit-card-scoring-system
 
@@ -44,21 +45,31 @@ Bashpython -m venv venv
 source venv/bin/activate
 
 3. Install Dependencies
-Bashpip install -r requirements.txt
+pip install -r requirements.txt
+---
 ```
 ##🚀 Running the Application Locally 
 ```
 To run the system locally, you will need to open two separate terminal windows (both with your virtual environment activated):
-Step A: Start the FastAPI Backend
-Bashuvicorn api.credit_risk_api:app --reload
-API Root / Health Check: http://127.0.0.1:8000Interactive 
-Swagger Docs: http://127.0.0.1:8000/docsInteractive ReDoc Docs: http://127.0.0.1:8000/redocStep 
-B: Start the Streamlit FrontendBashstreamlit run frontend/streamlit_app.py
-Streamlit UI Link: http://localhost:8501🔌 
-API Endpoints & Data Schema
+Step A: Start the FastAPI Backend: uvicorn api.credit_risk_api:app --reload
 
+API Root / Health Check: http://127.0.0.1:8000Interactive 
+
+Swagger Docs: http://127.0.0.1:8000/docsInteractive 
+
+ReDoc Docs: http://127.0.0.1:8000/redocStep 
+
+B: Start the Streamlit Frontend 
+streamlit run frontend/streamlit_app.py
+
+Streamlit UI Link: http://localhost:8501🔌 
+---
+
+## API Endpoints & Data Schema
+```
 1. Health CheckGET / or /healthResponse: Confirms the backend server status.
 2. Risk PredictionPOST /predictExample Request Payload (UCI Credit Card Schema):   
+
 JSON{
   "LIMIT_BAL": 20000,
   "SEX": 2,
@@ -84,11 +95,13 @@ JSON{
   "PAY_AMT5": 0,
   "PAY_AMT6": 0
 }
+---
 ```
 Example Response:JSON{
   "risk_prediction": 1,
   "risk_probability": 0.713,
   "risk_label": "Default Risk"
 }
+---
 ```
 💻 Technologies UsedPython – Core programming languageFastAPI – Backend API frameworkStreamlit – Frontend user interface frameworkScikit-learn – Machine learning model training and inferenceGit & GitHub – Version control and repository management
